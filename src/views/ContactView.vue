@@ -1,23 +1,23 @@
-<!--<template>
+<template>
   <div class="contact">
     <h1>{{ $t('contact.title') }}</h1>
 
     <div class="contact-content">
       <div class="contact-text">
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="enviarFormulario">
           <div class="form-group">
             <h2>{{ $t('contact.name.title') }}</h2>
-            <input type="text" id="name" v-model="name" required />
+            <input v-model="form.nombre" placeholder="Nombre" class="block mb-2 border p-2 w-full" />
           </div>
 
           <div class="form-group">
             <h2>{{ $t('contact.email.title') }}</h2>
-            <input type="email" id="email" v-model="email" required />
+            <input v-model="form.mail" placeholder="Mail" class="block mb-2 border p-2 w-full" />
           </div>
 
           <div class="form-group">
             <h2>{{ $t('contact.message.title') }}</h2>
-            <textarea id="message" v-model="message" required></textarea>
+            <input v-model="form.asunto" placeholder="Asunto" class="block mb-2 border p-2 w-full" />
           </div>
 
           <button type="submit">{{ $t('contact.send.title') }}</button>
@@ -25,23 +25,14 @@
       </div>
     </div>
   </div>
-</template> -->
-<template>
-  <div class="p-6">
-    <h1 class="text-xl font-bold mb-4">Formulario</h1>
-    <form @submit.prevent="enviarFormulario">
-      <input v-model="form.nombre" placeholder="Nombre" class="block mb-2 border p-2 w-full" />
-      <input v-model="form.mail" placeholder="Mail" class="block mb-2 border p-2 w-full" />
-      <input v-model="form.telefono" placeholder="Teléfono" class="block mb-2 border p-2 w-full" />
-      <input v-model="form.asunto" placeholder="Asunto" class="block mb-2 border p-2 w-full" />
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2">Enviar</button>
-    </form>
-  </div>
-</template>
+</template> 
+
+
+
 
 <script>
 /*export default {
-  data() {
+  data() {<input v-model="form.telefono" placeholder="Teléfono" class="block mb-2 border p-2 w-full" />
     return {
       name: '',
       email: '',
