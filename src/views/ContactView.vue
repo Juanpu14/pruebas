@@ -65,7 +65,7 @@
         } else {
           alert('Error al enviar el mensaje: ' + result.message);
         }
-      } catch (error) {
+      } catch (err nor) {
         alert('Error de red o servidor');
         console.error(error);
       }
